@@ -1,2 +1,2 @@
-# vanillajs-spa-master
+# Javascript Vanilla SPA
  Full vanilla SPA
