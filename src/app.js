@@ -5,6 +5,7 @@ import About        from './views/pages/About.js'
 import Error404     from './views/pages/Error404.js'
 import PostShow     from './views/pages/PostShow.js'
 import Register     from './views/pages/Register.js'
+import Secret       from './views/pages/Secret.js'
 
 import Navbar       from './views/components/Navbar.js'
 import Bottombar    from './views/components/Bottombar.js' 
@@ -17,6 +18,7 @@ const routes = {
     , '/about'      : About
     , '/p/:id'      : PostShow
     , '/register'   : Register
+    , '/secret'     : Secret
 };
 
 
@@ -40,6 +42,8 @@ const router = async () => {
 
     // Parse the URL and if it has an id part, change it with the string ":id"
     const parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
+
+    console.log('router utilisé via : ',parsedURL);
     
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead

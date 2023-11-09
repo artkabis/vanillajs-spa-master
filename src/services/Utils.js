@@ -23,6 +23,10 @@ const Utils = {
     // --------------------------------
     , sleep: (ms) => {
         return new Promise(resolve => setTimeout(resolve, ms));
+    },
+
+    setSessionStorage: (sessionName, sessionValue) => {
+        window.sessionStorage.setItem(sessionName, sessionValue);
     }
 }
 
