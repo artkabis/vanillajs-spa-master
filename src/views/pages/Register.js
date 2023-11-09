@@ -65,7 +65,8 @@ const Register = {
                 alert(`User with email ${email.value} was successfully submitted!`)
                 Utils.setSessionStorage('isLoggedIn',true)
             }   
-            console.log('Etat du des autorisation du loggin : ',window.sessionStorage.getItem('isLoggedIn')); 
+            console.log('Etat des autorisation du loggin : ',window.sessionStorage.getItem('isLoggedIn')); 
+            
         })
     }
 }
