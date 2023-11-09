@@ -1,8 +1,7 @@
-// --------------------------------
-//  Define Data Sources
-// --------------------------------
+"use strict";
 
-let getPostsList = async () => {
+
+const getPostsList = async () => {
      const options = {
         method: 'GET',
         headers: {
@@ -19,10 +18,10 @@ let getPostsList = async () => {
     }
 }
 
-let Home = {
+const Home = {
     render : async () => {
-        let posts = await getPostsList()
-        let view =  /*html*/`
+        const posts = await getPostsList()
+        const view =  /*html*/`
             <section class="section is-full">
                 <h1 class="has-text-white is-size-1"> Accueil - SPA full Vanilla </h1>
                 <ul class="columns mt-6 mb-6 is-flex is-flex-wrap-wrap is-justify-content-flex-end is-align-content-space-between">

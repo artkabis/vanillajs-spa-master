@@ -1,6 +1,9 @@
-let About = {
+"use strict";
+
+
+const About = {
     render : async () => {
-        let view =  /*html*/`
+        const view =  /*html*/`
             <section class="section">
                 <h1 class="has-text-white is-size-1"> About </h1>
             </section>

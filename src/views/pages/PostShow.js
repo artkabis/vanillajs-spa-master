@@ -1,6 +1,8 @@
-import Utils        from './../../services/Utils.js'
+"use strict";
 
-let getPost = async (id) => {
+import Utils from './../../services/Utils.js'
+
+const getPost = async (id) => {
     const options = {
        method: 'GET',
        headers: {
@@ -17,11 +19,11 @@ let getPost = async (id) => {
    }
 }
 
-let PostShow = {
+const PostShow = {
 
     render : async () => {
-        let request = Utils.parseRequestURL()
-        let post = await getPost(request.id)
+        const request = Utils.parseRequestURL()
+        const post = await getPost(request.id)
         
         return /*html*/`
             <section class="section has-text-white is-size-5">

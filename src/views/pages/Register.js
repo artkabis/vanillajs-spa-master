@@ -1,4 +1,7 @@
-let Register = {
+"use strict";
+
+
+const Register = {
 
     render: async () => {
         return /*html*/ `
@@ -45,9 +48,9 @@ let Register = {
     // This is a separate call as these can be registered only after the DOM has been painted
     , after_render: async () => {
         document.getElementById("register_submit_btn").addEventListener ("click",  () => {
-            let email       = document.getElementById("email_input");
-            let pass        = document.getElementById("pass_input");
-            let repeatPass  = document.getElementById("repeat_pass_input");
+            const email       = document.getElementById("email_input");
+            const pass        = document.getElementById("pass_input");
+            const repeatPass  = document.getElementById("repeat_pass_input");
             if (pass.value != repeatPass.value) {
                 alert (`The passwords dont match`)
             } else if (email.value =='' | pass.value == '' | repeatPass == '') {
