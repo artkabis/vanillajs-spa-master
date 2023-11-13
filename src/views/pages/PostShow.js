@@ -35,6 +35,7 @@ const PostShow = {
         `
     }
     , after_render: async () => {
+        console.log('Rendering Home finished.')
     }
 }
 

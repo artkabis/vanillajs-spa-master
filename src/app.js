@@ -14,11 +14,11 @@ import Utils        from './services/Utils.js'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/'             : Home
-    , '/about'      : About
-    , '/p/:id'      : PostShow
-    , '/register'   : Register
-    , '/secret'     : Secret
+    '/'             : { title: "Home", path: "/", route: Home }
+    , '/about'      : { title: "About", path: "/about", route: About }
+    , '/p/:id'      : { title: "Post show", path: "/p/:id", route: PostShow }
+    , '/register'   : { title: "Register", path: "/register", route: Register }
+    , '/secret'     : { title: "Secret page", path: "/secret", route: Secret }
 };
 
 
@@ -47,9 +47,15 @@ const router = async () => {
     
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead
-    const page = routes[parsedURL] ? routes[parsedURL] : Error404
-    content.innerHTML = await page.render();
-    await page.after_render();
+    // const page = routes[parsedURL] ? routes[parsedURL] : Error404
+    // content.innerHTML = await page.render();
+    // await page.after_render();
+    const routeInfo = routes[parsedURL] ? routes[parsedURL] : { title: "Error 404", path: "/404", route: Error404 };
+    document.title = routeInfo.title;
+
+    // Render the page
+    content.innerHTML = await routeInfo.route.render();
+    await routeInfo.route.after_render();
   
 }
 

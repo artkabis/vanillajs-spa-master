@@ -1,7 +1,7 @@
-import Counter from "../components/Counter.js";
-
-
 "use strict";
+
+import Counter from "../components/Counter.js";//import du composant Counter
+
 
 
 const getPostsList = async () => {
@@ -14,7 +14,6 @@ const getPostsList = async () => {
     try {
         const response = await fetch(`https://6548ddfadd8ebcd4ab23c561.mockapi.io/api/artk/article`, options)
         const json = await response.json();
-        // console.log(json)
         return json
     } catch (err) {
         console.log('Error getting documents', err)
@@ -43,6 +42,7 @@ const Home = {
         return view
     }
     , after_render: async () => {
+        console.log('Rendering Home finished.')
     }
 
 }

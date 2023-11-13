@@ -10,7 +10,9 @@ const About = {
         `
         return view
     },
-    after_render: async () => {}
+    after_render: async () => {
+        console.log('Rendering Home finished.')
+    }
         
 }
 
