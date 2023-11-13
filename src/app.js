@@ -22,45 +22,40 @@ const routes = {
 };
 
 
-// The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
+// Gestion des routes de notre SPA
 const router = async () => {
 
-    // Lazy load view element:
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
     const footer = null || document.getElementById('footer_container');
     
-    // Render the Header and footer of the page
+    // Rendu des éléments de base des pages
     header.innerHTML = await Navbar.render();
     await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
 
-    // Get the parsed URl from the addressbar
+    // Récupération de l'url via location (split des différents éléments [0],[1],[2])
     const request = Utils.parseRequestURL()
 
-    // Parse the URL and if it has an id part, change it with the string ":id"
+    // Gestion de l'url en fonction d'une une de page standard ou de page utilsant l'api (id:)
     const parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
 
     console.log('router utilisé via : ',parsedURL);
     
-    // Get the page from our hash of supported routes.
-    // If the parsed URL is not in our list of supported routes, select the 404 page instead
-    // const page = routes[parsedURL] ? routes[parsedURL] : Error404
-    // content.innerHTML = await page.render();
-    // await page.after_render();
+    // Récupération des informations les à l'object "routes"
     const routeInfo = routes[parsedURL] ? routes[parsedURL] : { title: "Error 404", path: "/404", route: Error404 };
     document.title = routeInfo.title;
 
-    // Render the page
+    // Rendu de la page
     content.innerHTML = await routeInfo.route.render();
-    await routeInfo.route.after_render();
+    await routeInfo.route.after_render();   
   
 }
 
-// Listen on hash change:
+// Ecouteur lié au changement d'url
 window.addEventListener('hashchange', router);
 
-// Listen on page load:
+// Ecouteur lié au chargement de la page
 window.addEventListener('load', router);
