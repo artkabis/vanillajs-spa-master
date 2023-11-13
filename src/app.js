@@ -12,7 +12,7 @@ import Bottombar    from './views/components/Bottombar.js'
 
 import Utils        from './services/Utils.js'
 
-// List of supported routes. Any url other than these routes will throw a 404 error
+// Routes existantes en dehors de la view error404 qui est gérée depuis le Router
 const routes = {
     '/'             : { title: "Home", path: "/", route: Home }
     , '/about'      : { title: "About", path: "/about", route: About }
