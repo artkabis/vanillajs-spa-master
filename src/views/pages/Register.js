@@ -49,24 +49,24 @@ const Register = {
     // All the code related to DOM interactions and controls go in here.
     // This is a separate call as these can be registered only after the DOM has been painted
     , after_render: async () => {
-        Utils.setSessionStorage('isLoggedIn',false);
+        Utils.setSStrg('isLoggedIn',false);
         document.getElementById("register_submit_btn").addEventListener ("click",  () => {
             const email       = document.getElementById("email_input");
             const pass        = document.getElementById("pass_input");
             const repeatPass  = document.getElementById("repeat_pass_input");
             if (pass.value != repeatPass.value) {
                 alert (`The passwords dont match`);
-                Utils.setSessionStorage('isLoggedIn',false);
+                Utils.setSStrg('isLoggedIn',false);
             } else if (email.value =='' | pass.value == '' | repeatPass == '') {
                 alert (`The fields cannot be empty`);
-                Utils.setSessionStorage('isLoggedIn',false);
+                Utils.setSStrg('isLoggedIn',false);
             } 
             else {
                 alert(`User with email ${email.value} was successfully submitted!`)
-                Utils.setSessionStorage('isLoggedIn',true)
+                Utils.setSStrg('isLoggedIn',true)
             }   
-            console.log('Etat des autorisation du loggin : ',window.sessionStorage.getItem('isLoggedIn')); 
-            
+            console.log('Etat des autorisation du loggin : ',Utils.getSStrg('isLoggedIn')); 
+
         })
     }
 }

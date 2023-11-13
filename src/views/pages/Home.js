@@ -1,3 +1,6 @@
+import Counter from "../components/Counter.js";
+
+
 "use strict";
 
 
@@ -22,8 +25,13 @@ const Home = {
     render : async () => {
         const posts = await getPostsList()
         const view =  /*html*/`
+
             <section class="section is-full">
                 <h1 class="has-text-white is-size-1"> Accueil - SPA full Vanilla </h1>
+                <div class="counter_components">
+                <click-counter></click-counter>
+            </div>
+            <br>
                 <ul class="columns mt-6 mb-6 is-flex is-flex-wrap-wrap is-justify-content-flex-end is-align-content-space-between">
                     ${ posts.map(post => 
                         /*html*/`<li class="column bg-dark text-dark"><a class="button is-primary" href="#/p/${post.id}">${post.name}</a></li>`

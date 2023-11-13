@@ -25,8 +25,11 @@ const Utils = {
         return new Promise(resolve => setTimeout(resolve, ms));
     },
 
-    setSessionStorage: (sessionName, sessionValue) => {
+    setSStrg: (sessionName, sessionValue) => {
         window.sessionStorage.setItem(sessionName, sessionValue);
+    },
+    getSStrg: (sessionName) => {
+        return window.sessionStorage.getItem(sessionName);
     }
 }
 

@@ -1,9 +1,11 @@
 "use strict";
 
+import Utils from "../../services/Utils.js"
+
 let isLog, viewActive = false;
 const Secret = {
     render : async () => {
-        isLog = JSON.parse(window.sessionStorage.getItem('isLoggedIn'))
+        isLog = JSON.parse(Utils.getSStrg('isLoggedIn'))
         console.log('Autorisation status avant rendu : ',isLog)
         const view =  {viewLogin: `<section class="section">
                 <h1 class="has-text-white is-size-1"> Vous êtes désormais sur la page secréte. </h1>
