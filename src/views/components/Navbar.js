@@ -18,10 +18,10 @@ let Navbar = {
                     <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
                         <div class="navbar-start">
                             <a class="navbar-item" href="/#/">
-                                Home
+                                Accueil
                             </a>
                             <a class="navbar-item" href="/#/about">
-                                About
+                                À propos
                             </a>
                             <a class="navbar-item" href="/#/secret">
                                 Secret
@@ -31,10 +31,10 @@ let Navbar = {
                             <div class="navbar-item">
                                 <div class="buttons">
                                     <a class="button is-primary" href="/#/register">
-                                        <strong>Sign up</strong>
+                                        <strong>s'enregistrer</strong>
                                     </a>
                                     <a class="button is-light">
-                                        Log in
+                                        Se connecter
                                     </a>
                                 </div>
                             </div>

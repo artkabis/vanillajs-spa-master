@@ -45,7 +45,7 @@ const router = async () => {
     console.log('router utilisé via : ',parsedURL);
     
     // Récupération des informations les à l'object "routes"
-    const routeInfo = routes[parsedURL] ? routes[parsedURL] : { title: "Error 404", path: "/404", route: Error404 };
+    const routeInfo = routes[parsedURL] ? routes[parsedURL] : { title: "Erreur 404", path: "/404", route: Error404 };
     document.title = routeInfo.title;
 
     // Rendu de la page

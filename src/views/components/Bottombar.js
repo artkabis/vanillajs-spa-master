@@ -1,10 +1,10 @@
 let Bottombar = {
     render: async () => {
         let view =  /*html*/`
-        <footer class="footer">
-            <div class="content has-text-centered">
+        <footer class="footer has-background-black has-text-white">
+            <div class="content has-text-centered pt-6">
                 <p>
-                    This is my foot. There are many like it, but this one is mine.
+                    SPA App Artkabis - 2023
                 </p>
             </div>
         </footer>

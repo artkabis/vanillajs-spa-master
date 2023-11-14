@@ -31,9 +31,9 @@ const Home = {
                 <click-counter></click-counter>
             </div>
             <br>
-                <ul class="columns mt-6 mb-6 is-flex is-flex-wrap-wrap is-justify-content-flex-end is-align-content-space-between">
+                <ul class="columns mt-6 mb-6 is-flex is-flex-wrap-wrap is-justify-content-flex-start is-align-content-space-between">
                     ${ posts.map(post => 
-                        /*html*/`<li class="column bg-dark text-dark"><a class="button is-primary" href="#/p/${post.id}">${post.name}</a></li>`
+                        /*html*/`<li class="column bg-dark text-dark is-2"><a class="button is-primary is-fullwidth" href="#/p/${post.id}">${post.name}</a></li>`
                         ).join('\n ')
                     }
                 </ul>
