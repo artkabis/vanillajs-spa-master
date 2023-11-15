@@ -1,3 +1,5 @@
+"use strict";
+
 import Utils from '../../services/Utils.js';
 
 class Counter extends HTMLElement {
@@ -10,7 +12,6 @@ class Counter extends HTMLElement {
         `;
         const btn = this.querySelector(".counterBtn");
         btn.onclick = () => btn.innerHTML = `Compteur de clics : ${addCounter()}`;   
-        
     }
 }
 

@@ -1,6 +1,5 @@
 "use strict";
 
-
 const Error404 = {
 
     render : async () => {

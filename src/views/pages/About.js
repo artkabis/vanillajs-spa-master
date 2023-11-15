@@ -1,6 +1,5 @@
 "use strict";
 
-
 const About = {
     render : async () => {
         const view =  /*html*/`

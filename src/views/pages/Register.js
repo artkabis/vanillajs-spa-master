@@ -1,4 +1,5 @@
 "use strict";
+
 import Utils from "../../services/Utils.js";
 
 const Register = {
@@ -46,8 +47,7 @@ const Register = {
         
     }
     
-    // All the code related to DOM interactions and controls go in here.
-    // This is a separate call as these can be registered only after the DOM has been painted
+    //Gestion du login et de l'autorisation d'accès à la page secréte
     , after_render: async () => {
         Utils.setSStrg('isLoggedIn',false);
         document.getElementById("register_submit_btn").addEventListener ("click",  () => {
