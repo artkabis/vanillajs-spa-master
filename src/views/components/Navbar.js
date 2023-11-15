@@ -1,4 +1,6 @@
-let Navbar = {
+"use strict";
+
+const Navbar = {
     render: async () => {
         let view =  /*html*/`
              <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -48,7 +50,6 @@ let Navbar = {
     after_render: async () => {
         
      }
-
 }
 
 export default Navbar;

@@ -16,7 +16,8 @@ class Counter extends HTMLElement {
 }
 
 const addCounter = () =>{
-    Utils.getLStrg('counterValue') ? Utils.setLStrg('counterValue', Number(Utils.getLStrg('counterValue'))+1) : Utils.setLStrg('counterValue',1);
+    let counter = Utils.getLStrg('counterValue') && JSON.parse(Utils.getLStrg('counterValue'));
+    Utils.getLStrg('counterValue') ? Utils.setLStrg('counterValue', ++counter) : Utils.setLStrg('counterValue',1);//Incremnte counterValue or init value with 1
     return Number(Utils.getLStrg('counterValue'));
 }
 

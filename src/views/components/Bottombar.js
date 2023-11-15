@@ -1,4 +1,6 @@
-let Bottombar = {
+"use strict";
+
+const Bottombar = {
     render: async () => {
         let view =  /*html*/`
         <footer class="footer has-background-black has-text-white">
