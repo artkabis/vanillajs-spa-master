@@ -30,6 +30,12 @@ const Utils = {
     },
     getSStrg: (sessionName) => {
         return window.sessionStorage.getItem(sessionName);
+    },
+    setLStrg: (localName, localValue) => {
+        window.localStorage.setItem(localName, localValue);
+    },
+    getLStrg: (localName) => {
+        return window.localStorage.getItem(localName);
     }
 }
 

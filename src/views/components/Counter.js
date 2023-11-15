@@ -5,7 +5,7 @@ class Counter extends HTMLElement {
         super();
         this.innerHTML = /*html*/`
             <div class="sparkle-button">
-            <a class="button is-warning mt-6 counterBtn">Compteur de clics : ${Utils.getSStrg('counterValue') ? Number(Utils.getSStrg('counterValue')) : 0}</a>
+            <a class="button is-warning mt-6 counterBtn">Compteur de clics : ${Utils.getLStrg('counterValue') ? Number(Utils.getLStrg('counterValue')) : 0}</a>
             </div>
         `;
         const btn = this.querySelector(".counterBtn");
@@ -15,8 +15,8 @@ class Counter extends HTMLElement {
 }
 
 const addCounter = () =>{
-    Utils.getSStrg('counterValue') ? Utils.setSStrg('counterValue', Number(Utils.getSStrg('counterValue'))+1) : Utils.setSStrg('counterValue',1);
-    return Number(Utils.getSStrg('counterValue'));
+    Utils.getLStrg('counterValue') ? Utils.setLStrg('counterValue', Number(Utils.getLStrg('counterValue'))+1) : Utils.setLStrg('counterValue',1);
+    return Number(Utils.getLStrg('counterValue'));
 }
 
 customElements.define("click-counter", Counter);//on définit notre custom element de type HTMLElement sur click-counter et ont lui rattache ses fonctionnalités via Counter.
