@@ -1,7 +1,7 @@
 "use strict";
 
 import Home         from './views/pages/Home.js'
-import Todo         from './views/components/Todo.js';
+import Todo         from './views/pages/Todo.js';
 import About        from './views/pages/About.js'
 import Error404     from './views/pages/Error404.js'
 import PostShow     from './views/pages/PostShow.js'
