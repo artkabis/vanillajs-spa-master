@@ -28,9 +28,9 @@ const Home = {
             <section class="section is-full">
                 <h1 class="has-text-white is-size-1"> Accueil - SPA full Vanilla </h1>
                 <div class="counter_components">
-                <click-counter></click-counter>
-            </div>
-            <br>
+                    <click-counter></click-counter>
+                </div>
+                <br>
                 <ul class="columns mt-6 mb-6 is-flex is-flex-wrap-wrap is-justify-content-flex-start is-align-content-space-between">
                     ${ posts.map(post => 
                         /*html*/`<li class="column bg-dark text-dark is-2"><a class="button is-primary is-fullwidth" href="#/p/${post.id}">${post.name}</a></li>`

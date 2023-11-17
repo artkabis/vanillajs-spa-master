@@ -11,7 +11,7 @@ class Counter extends HTMLElement {
             </div>
         `;
         const btn = this.querySelector(".counterBtn");
-        btn.onclick = () => btn.innerHTML = `Compteur de clics : ${addCounter()}`;   
+        btn.onclick = () => btn.innerHTML = `Compteur de clics : ${addCounter()}`;
     }
 }
 
