@@ -27,10 +27,12 @@ const PostShow = {
         
         return /*html*/`
             <section class="section has-text-white is-size-5">
+                <img src="${post.avatar}" alt="Avatar de ${post.name}" />
                 <h1 class="mb-4"> <span class="has-text-primary">Post Id :</span> ${post.id}</h1>
                 <p class="mb-4"> <span class="has-text-primary">Post Title : </span>${post.title} </p>
                 <p class="mb-4"> <span class="has-text-primary">Post Content : </span>${post.article} </p>
                 <p class="mb-4"> <span class="has-text-primary">Post Author : </span>${post.name} </p>
+                <p class="mb-4"> <span class="has-text-primary">Date de création : </span>${post.createdAt.split('T')[0].split('-').reverse().join('/')} </p>
             </section>
         `
     }
