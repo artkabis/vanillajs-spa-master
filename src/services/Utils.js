@@ -36,7 +36,19 @@ const Utils = {
     },
     getLStrg: (localName) => {
         return window.localStorage.getItem(localName);
-    }
+    },
+    sanitizeInput : (string) =>{
+        const map = {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#x27;',
+          '/': '&#x2F;',
+        };
+        const reg = /[&<>"'/]/ig;
+        return string.replace(reg, (match) => (map[match])).trim();
+      }
 }
 
 export default Utils;

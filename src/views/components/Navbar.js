@@ -22,6 +22,9 @@ const Navbar = {
                             <a class="navbar-item" href="/#/">
                                 Accueil
                             </a>
+                            <a class="navbar-item" href="/#/todo">
+                                Todo
+                            </a>
                             <a class="navbar-item" href="/#/about">
                                 À propos
                             </a>
@@ -48,7 +51,7 @@ const Navbar = {
         return view
     },
     after_render: async () => {
-        
+
      }
 }
 

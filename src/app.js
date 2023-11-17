@@ -1,6 +1,7 @@
 "use strict";
 
 import Home         from './views/pages/Home.js'
+import Todo         from './views/components/Todo.js';
 import About        from './views/pages/About.js'
 import Error404     from './views/pages/Error404.js'
 import PostShow     from './views/pages/PostShow.js'
@@ -15,6 +16,7 @@ import Utils        from './services/Utils.js'
 // Routes existantes en dehors de la view error404 qui est gérée depuis le Router
 const routes = {
     '/'             : { title: "Home", path: "/", route: Home }
+    ,'/todo'         : { title: "Todo", path: "/todo", route: Todo }
     , '/about'      : { title: "About", path: "/about", route: About }
     , '/p/:id'      : { title: "Post show", path: "/p/:id", route: PostShow }
     , '/register'   : { title: "Register", path: "/register", route: Register }
